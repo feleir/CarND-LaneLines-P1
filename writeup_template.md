@@ -19,10 +19,10 @@ Then I find the region on interest out of the image (considering the camera is i
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by to compute all the slope to detect if they are the left of right line and remove not reasonable results based on the values of k and b (as described in the section videos) and finally draw those lines.
 
 ![Solid white lane input](https://github.com/feleir/CarND-LaneLines-P1/raw/master/test_images/solidWhiteCurve.jpg)
-![Solid white lane output](https://github.com/feleir/CarND-LaneLines-P1/raw/master/test_images/solidWhiteCurve.jpg)
+![Solid white lane output](https://github.com/feleir/CarND-LaneLines-P1/raw/master/test_images_output/solidWhiteCurve.jpg)
 
 ![Solid yellow curve input](https://github.com/feleir/CarND-LaneLines-P1/raw/master/test_images/solidYellowCurve.jpg)
-![Solid yellow curve output](https://github.com/feleir/CarND-LaneLines-P1/raw/master/test_images/solidYellowCurve.jpg)
+![Solid yellow curve output](https://github.com/feleir/CarND-LaneLines-P1/raw/master/test_images_output/solidYellowCurve.jpg)
 
 
 ### 2. Identify potential shortcomings with your current pipeline
