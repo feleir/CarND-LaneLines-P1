@@ -18,22 +18,22 @@ Then I find the region on interest out of the image (considering the camera is i
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by to compute all the slope to detect if they are the left of right line and remove not reasonable results based on the values of k and b (as described in the section videos) and finally draw those lines.
 
-[solidwhite]: ./test_images_output/solidWhiteRight.jpg 
-[solidyellow]: ./test_images_output/solidYellowLeft.jpg
-[curved1]: ./test_images_output/solidWhiteCurve.jpg
-[curved2]: ./test_images_output/solidYellowCurve.jpg
+![Solid white lane input](https://github.com/feleir/CarND-LaneLines-P1/raw/master/test_images/solidWhiteCurve.jpg)
+![Solid white lane output](https://github.com/feleir/CarND-LaneLines-P1/raw/master/test_images/solidWhiteCurve.jpg)
+
+![Solid yellow curve input](https://github.com/feleir/CarND-LaneLines-P1/raw/master/test_images/solidYellowCurve.jpg)
+![Solid yellow curve output](https://github.com/feleir/CarND-LaneLines-P1/raw/master/test_images/solidYellowCurve.jpg)
 
 
 ### 2. Identify potential shortcomings with your current pipeline
 
+One potential shortcoming is that the parameters are tuned for the conditions of the images/videos so they can be some failures while running this code in real time conditions.
 
-One potential shortcoming would be what would happen when ... 
+Another shortcoming would be that the paramters to limit slope and remove not needed points are based on trial and error.
 
-Another shortcoming could be ...
+Another shortcoming is that the curves are potentially not being properly detected and dark shadows or bright shadows can be found as lanes or create unrequired changes in the lane lines.
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
-
-Another potential improvement could be to ...
+A possible improvement would be to draw the lines in segments instead of a full line to be able to easy detect curves and also find probably better values or adapt the values for the different phases of the pipelines according to light conditions.
