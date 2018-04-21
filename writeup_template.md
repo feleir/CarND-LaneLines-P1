@@ -1,11 +1,5 @@
 # **Finding Lane Lines on the Road** 
 
-## Writeup Template
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
-
----
-
 **Finding Lane Lines on the Road**
 
 The goals / steps of this project are the following:
@@ -15,7 +9,10 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
+[solidwhite]: ./test_images_output/solidWhiteRight.jpg 
+[solidyellow]: ./test_images_output/solidYellowLeft.jpg
+[curved1]: ./test_images_output/solidWhiteCurve.jpg
+[curved2]: ./test_images_output/solidYellowCurve.jpg
 
 ---
 
@@ -23,11 +20,13 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
+My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I used gaussian blur to make the image smooth and reduce noise, with a gaussian blur kernel size of 15.
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
+Next, I use canny detection to find the edges of the image applying a low threshold of 50 and high threshold of 150 which seem to be provide the best output (based on trial and error).
 
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
+Then I find the region on interest out of the image (considering the camera is in the middle of the dashboard) and applied hough algorithm to detect lines in the image
+
+In order to draw a single line on the left and right lanes, I modified the draw_lines() function by to compute all the slope to detect if they are the left of right line and remove not reasonable results based on the values of k and b (as described in the section videos) and finally draw those lines.
 
 ![alt text][image1]
 
