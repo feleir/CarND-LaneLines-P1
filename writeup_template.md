@@ -6,16 +6,6 @@ The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
 * Reflect on your work in a written report
 
-
-[//]: # (Image References)
-
-[solidwhite]: ./test_images_output/solidWhiteRight.jpg 
-[solidyellow]: ./test_images_output/solidYellowLeft.jpg
-[curved1]: ./test_images_output/solidWhiteCurve.jpg
-[curved2]: ./test_images_output/solidYellowCurve.jpg
-
----
-
 ### Reflection
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
@@ -28,7 +18,10 @@ Then I find the region on interest out of the image (considering the camera is i
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by to compute all the slope to detect if they are the left of right line and remove not reasonable results based on the values of k and b (as described in the section videos) and finally draw those lines.
 
-![alt text][image1]
+[solidwhite]: ./test_images_output/solidWhiteRight.jpg 
+[solidyellow]: ./test_images_output/solidYellowLeft.jpg
+[curved1]: ./test_images_output/solidWhiteCurve.jpg
+[curved2]: ./test_images_output/solidYellowCurve.jpg
 
 
 ### 2. Identify potential shortcomings with your current pipeline
